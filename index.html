@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="長野県安曇野市穂高の精肉店、肉の田中屋のリニューアル提案用デモサイト。馬さし、馬肉、信州牛、焼肉用味付肉、ご贈答用詰め合わせなどを事前予約で承ります。">
+  <title>肉の田中屋｜安曇野市穂高の馬さし・信州牛・焼肉用精肉店</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --wine: #7A1F2B;
+      --wine-dark: #4B121A;
+      --charcoal: #1F1A17;
+      --charcoal-2: #33251F;
+      --cream: #F4EDE3;
+      --paper: #FFF9F0;
+      --gold: #C9A24D;
+      --gold-soft: #E7D29A;
+      --green: #586A4D;
+      --ink: #261E1A;
+      --muted: #766960;
+      --line: rgba(38, 30, 26, 0.14);
+      --line-dark: rgba(244, 237, 227, 0.16);
+      --shadow: 0 18px 42px rgba(31, 26, 23, 0.15);
+      --radius: 8px;
+      --header-height: 76px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 18px);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: "Noto Sans JP", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.85;
+      letter-spacing: 0;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      transform: translateY(-140%);
+      padding: 10px 14px;
+      border-radius: var(--radius);
+      background: var(--paper);
+      color: var(--wine);
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 249, 240, 0.94);
+      border-bottom: 1px solid rgba(122, 31, 43, 0.16);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      width: min(1120px, calc(100% - 40px));
+      min-height: var(--header-height);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+      color: var(--charcoal);
+      font-weight: 900;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--paper);
+      background:
+        linear-gradient(145deg, var(--wine) 0%, var(--wine-dark) 55%, var(--charcoal) 100%);
+      border: 2px solid rgba(201, 162, 77, 0.72);
+      box-shadow: 0 9px 22px rgba(122, 31, 43, 0.26);
+      font-family: "Noto Serif JP", serif;
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .brand-name {
+      display: grid;
+      line-height: 1.2;
+    }
+
+    .brand-name strong {
+      font-family: "Noto Serif JP", serif;
+      font-size: 20px;
+      letter-spacing: 0;
+    }
+
+    .brand-name small {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      margin-left: auto;
+      min-width: 0;
+      color: var(--charcoal);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .site-nav a {
+      padding: 10px 9px;
+      border-radius: var(--radius);
+      white-space: nowrap;
+    }
+
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      background: rgba(122, 31, 43, 0.08);
+      color: var(--wine);
+      outline: none;
+    }
+
+    .header-call {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: max-content;
+      min-height: 44px;
+      padding: 9px 14px;
+      border-radius: var(--radius);
+      color: var(--paper);
+      background: var(--wine);
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(122, 31, 43, 0.22);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 650px;
+      display: grid;
+      align-items: center;
+      color: var(--paper);
+      background:
+        linear-gradient(112deg, rgba(31, 26, 23, 0.98) 0%, rgba(75, 18, 26, 0.96) 42%, rgba(122, 31, 43, 0.9) 78%, rgba(31, 26, 23, 0.98) 100%),
+        repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 18px);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(201, 162, 77, 0.18) 0 1px, transparent 1px 100%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 100%);
+      background-size: 88px 88px;
+      opacity: 0.28;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 96px;
+      background: linear-gradient(180deg, rgba(244, 237, 227, 0), var(--cream));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 84px 0 128px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.14fr) minmax(280px, 0.86fr);
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-inner > *,
+    .commitment-layout > *,
+    .access-layout > *,
+    .hours-layout > *,
+    .contact-layout > * {
+      min-width: 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 18px;
+      color: var(--gold-soft);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 44px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Noto Serif JP", serif;
+      letter-spacing: 0;
+      line-height: 1.35;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      font-size: 56px;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .hero-lead {
+      max-width: 680px;
+      margin: 24px 0 32px;
+      color: rgba(255, 249, 240, 0.9);
+      font-size: 19px;
+      font-weight: 500;
+      overflow-wrap: anywhere;
+    }
+
+    .hero-actions,
+    .section-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 13px 20px;
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-weight: 900;
+      line-height: 1.35;
+      text-align: center;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .button-primary {
+      color: var(--charcoal);
+      background: var(--gold);
+      box-shadow: 0 14px 30px rgba(201, 162, 77, 0.25);
+    }
+
+    .button-secondary {
+      color: var(--paper);
+      border-color: rgba(255, 249, 240, 0.42);
+      background: rgba(255, 249, 240, 0.08);
+    }
+
+    .button-dark {
+      color: var(--paper);
+      background: var(--wine);
+      box-shadow: 0 14px 30px rgba(122, 31, 43, 0.2);
+    }
+
+    .button-light {
+      color: var(--wine);
+      border-color: rgba(122, 31, 43, 0.2);
+      background: var(--paper);
+    }
+
+    .rating-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      color: rgba(255, 249, 240, 0.88);
+      font-weight: 700;
+    }
+
+    .rating-strip span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 249, 240, 0.2);
+      border-radius: var(--radius);
+      background: rgba(31, 26, 23, 0.32);
+    }
+
+    .hero-panel {
+      align-self: stretch;
+      display: grid;
+      align-content: center;
+      gap: 14px;
+      padding: 30px;
+      border: 1px solid rgba(255, 249, 240, 0.18);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255, 249, 240, 0.12), rgba(255, 249, 240, 0.05)),
+        rgba(31, 26, 23, 0.32);
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.22);
+    }
+
+    .hero-panel p {
+      margin: 0;
+      color: rgba(255, 249, 240, 0.84);
+    }
+
+    .hero-panel strong {
+      display: block;
+      color: var(--gold-soft);
+      font-size: 14px;
+    }
+
+    .quick-info {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .quick-info li {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid rgba(255, 249, 240, 0.12);
+      border-radius: var(--radius);
+      background: rgba(255, 249, 240, 0.07);
+    }
+
+    .quick-info li > span:last-child {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .quick-info .icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(201, 162, 77, 0.18);
+      font-size: 22px;
+    }
+
+    main {
+      background: var(--cream);
+    }
+
+    section {
+      position: relative;
+      padding: 88px 0;
+    }
+
+    section:nth-of-type(even) {
+      background: var(--paper);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 14px;
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .section-label {
+      color: var(--wine);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .section-heading h2 {
+      color: var(--charcoal);
+      font-size: 34px;
+      font-weight: 900;
+      overflow-wrap: anywhere;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      overflow-wrap: anywhere;
+    }
+
+    .commitment-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    .message-box {
+      padding: 28px;
+      border-left: 5px solid var(--wine);
+      background: linear-gradient(90deg, rgba(122, 31, 43, 0.08), rgba(255, 249, 240, 0));
+    }
+
+    .message-box p {
+      margin: 0 0 16px;
+      overflow-wrap: anywhere;
+    }
+
+    .message-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .feature-card,
+    .product-card,
+    .step-card,
+    .info-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 249, 240, 0.84);
+      box-shadow: 0 14px 30px rgba(31, 26, 23, 0.06);
+    }
+
+    .feature-card {
+      min-height: 224px;
+      padding: 22px;
+    }
+
+    .feature-card .feature-icon,
+    .product-card .product-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      background: rgba(122, 31, 43, 0.1);
+      font-size: 28px;
+    }
+
+    .feature-card h3,
+    .product-card h3,
+    .step-card h3,
+    .info-card h3 {
+      color: var(--charcoal);
+      font-family: "Noto Sans JP", system-ui, sans-serif;
+      font-size: 19px;
+      font-weight: 900;
+    }
+
+    .feature-card p,
+    .product-card p,
+    .step-card p,
+    .info-card p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .confirm {
+      color: rgba(118, 105, 96, 0.78);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .confirm-line {
+      margin: 22px 0 0;
+      padding: 14px 16px;
+      border: 1px dashed rgba(122, 31, 43, 0.28);
+      border-radius: var(--radius);
+      color: rgba(118, 105, 96, 0.8);
+      background: rgba(255, 249, 240, 0.56);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .product-card {
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+    }
+
+    .product-card p {
+      flex: 1;
+    }
+
+    .product-card .confirm {
+      display: block;
+      margin-top: 18px;
+    }
+
+    .note {
+      margin: 24px 0 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--gold);
+      color: var(--muted);
+      background: rgba(201, 162, 77, 0.13);
+      font-weight: 700;
+    }
+
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      counter-reset: flow;
+    }
+
+    .step-card {
+      position: relative;
+      min-height: 230px;
+      padding: 26px;
+      overflow: hidden;
+    }
+
+    .step-card::before {
+      counter-increment: flow;
+      content: "0" counter(flow);
+      position: absolute;
+      right: 20px;
+      top: 14px;
+      color: rgba(122, 31, 43, 0.1);
+      font-family: "Noto Serif JP", serif;
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .step-icon {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 50%;
+      color: var(--paper);
+      background: var(--wine);
+      font-size: 28px;
+    }
+
+    .attention-list {
+      display: grid;
+      gap: 8px;
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .attention-list li {
+      display: grid;
+      grid-template-columns: 24px 1fr;
+      gap: 8px;
+    }
+
+    .faq {
+      margin-top: 42px;
+    }
+
+    .faq h3 {
+      margin-bottom: 16px;
+      color: var(--charcoal);
+      font-size: 24px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 8px 22px rgba(31, 26, 23, 0.05);
+    }
+
+    summary {
+      position: relative;
+      min-height: 58px;
+      padding: 16px 52px 16px 18px;
+      cursor: pointer;
+      color: var(--charcoal);
+      font-weight: 900;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(122, 31, 43, 0.2);
+      border-radius: 50%;
+      color: var(--wine);
+      font-weight: 900;
+    }
+
+    details[open] summary::after {
+      content: "-";
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 18px 18px;
+      color: var(--muted);
+    }
+
+    .access-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .map-frame {
+      min-height: 430px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #ddd;
+      box-shadow: var(--shadow);
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      display: block;
+      border: 0;
+    }
+
+    .info-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .info-card {
+      padding: 24px;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 12px;
+      margin: 14px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .info-list li {
+      display: grid;
+      grid-template-columns: 6.2em 1fr;
+      gap: 12px;
+      border-bottom: 1px solid rgba(38, 30, 26, 0.08);
+      padding-bottom: 10px;
+    }
+
+    .info-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .info-list span:first-child {
+      color: var(--wine);
+      font-weight: 900;
+    }
+
+    .hours {
+      color: var(--paper);
+      background:
+        linear-gradient(135deg, var(--charcoal) 0%, var(--wine-dark) 55%, var(--wine) 100%);
+    }
+
+    .hours .section-label,
+    .hours .section-heading h2,
+    .hours .section-heading p {
+      color: var(--paper);
+    }
+
+    .hours .section-heading p {
+      opacity: 0.86;
+    }
+
+    .hours-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hours-panel,
+    .call-panel {
+      border: 1px solid var(--line-dark);
+      border-radius: var(--radius);
+      background: rgba(255, 249, 240, 0.08);
+      box-shadow: 0 22px 58px rgba(0, 0, 0, 0.18);
+    }
+
+    .hours-panel {
+      padding: 28px;
+    }
+
+    .business-list {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .business-list li {
+      display: grid;
+      grid-template-columns: 7em 1fr;
+      gap: 16px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line-dark);
+    }
+
+    .business-list li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .business-list span:first-child {
+      color: var(--gold-soft);
+      font-weight: 900;
+    }
+
+    .call-panel {
+      display: grid;
+      align-content: center;
+      gap: 18px;
+      padding: 30px;
+    }
+
+    .call-panel h3 {
+      color: var(--paper);
+      font-size: 28px;
+    }
+
+    .call-panel p {
+      margin: 0;
+      color: rgba(255, 249, 240, 0.82);
+    }
+
+    .call-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 64px;
+      padding: 14px 22px;
+      border-radius: var(--radius);
+      color: var(--charcoal);
+      background: var(--gold);
+      font-size: 24px;
+      font-weight: 900;
+      box-shadow: 0 18px 36px rgba(201, 162, 77, 0.2);
+    }
+
+    .fax-line {
+      color: rgba(255, 249, 240, 0.78);
+      font-weight: 700;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .contact-lead {
+      padding: 28px;
+      border-radius: var(--radius);
+      color: var(--paper);
+      background: var(--wine);
+    }
+
+    .contact-lead h2 {
+      font-size: 30px;
+    }
+
+    .contact-lead p {
+      margin: 16px 0 22px;
+      color: rgba(255, 249, 240, 0.86);
+    }
+
+    .form-panel {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      color: var(--charcoal);
+      font-weight: 900;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(38, 30, 26, 0.2);
+      border-radius: var(--radius);
+      background: #fff;
+      color: var(--ink);
+      font-size: 16px;
+    }
+
+    input {
+      min-height: 52px;
+      padding: 12px 14px;
+    }
+
+    textarea {
+      min-height: 156px;
+      resize: vertical;
+      padding: 14px;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--wine);
+      outline: 3px solid rgba(122, 31, 43, 0.14);
+    }
+
+    .form-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .demo-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .site-footer {
+      padding: 44px 0;
+      color: rgba(255, 249, 240, 0.8);
+      background: var(--charcoal);
+    }
+
+    .footer-inner {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: end;
+    }
+
+    .footer-brand {
+      color: var(--paper);
+      font-family: "Noto Serif JP", serif;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .footer-inner p {
+      margin: 8px 0 0;
+    }
+
+    .footer-meta {
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .mobile-call-bar {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      :root {
+        --header-height: 68px;
+      }
+
+      .header-inner {
+        width: min(100% - 28px, 1120px);
+        min-height: var(--header-height);
+        flex-wrap: wrap;
+        gap: 0 12px;
+        padding: 8px 0 10px;
+      }
+
+      .site-nav {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 8px 0 0;
+        padding: 8px 0 2px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .site-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .site-nav a {
+        padding: 8px 10px;
+        background: rgba(122, 31, 43, 0.06);
+      }
+
+      .header-call {
+        min-height: 40px;
+        padding: 8px 11px;
+        font-size: 14px;
+      }
+
+      .hero-inner,
+      .commitment-layout,
+      .access-layout,
+      .hours-layout,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-inner {
+        padding: 66px 0 94px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-panel {
+        padding: 22px;
+      }
+
+      .feature-grid,
+      .flow-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding-bottom: 92px;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .container,
+      .header-inner,
+      .hero-inner,
+      .footer-inner {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+      }
+
+      .brand-name strong {
+        font-size: 18px;
+      }
+
+      .brand-name small {
+        display: none;
+      }
+
+      .header-call {
+        display: none;
+      }
+
+      .site-nav {
+        gap: 3px;
+        font-size: 12px;
+      }
+
+      .site-nav a {
+        padding: 7px 6px;
+      }
+
+      .hero-inner {
+        padding: 52px 0 80px;
+      }
+
+      .hero h1 {
+        font-size: 31px;
+        line-break: strict;
+        word-break: keep-all;
+      }
+
+      .hero-lead {
+        font-size: 17px;
+      }
+
+      .button {
+        width: 100%;
+        min-height: 54px;
+      }
+
+      .rating-strip span {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .hero-panel {
+        padding: 18px;
+      }
+
+      .quick-info li {
+        grid-template-columns: 38px 1fr;
+        padding: 10px;
+      }
+
+      .quick-info .icon {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+      }
+
+      .section-heading {
+        margin-bottom: 26px;
+      }
+
+      .section-heading h2 {
+        font-size: 28px;
+        line-break: strict;
+      }
+
+      .hero h1 {
+        overflow-wrap: normal;
+      }
+
+      .section-heading h2 {
+        overflow-wrap: anywhere;
+      }
+
+      .message-box,
+      .feature-card,
+      .product-card,
+      .step-card,
+      .info-card,
+      .hours-panel,
+      .call-panel,
+      .contact-lead,
+      .form-panel {
+        padding: 20px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card {
+        min-height: 0;
+      }
+
+      .map-frame,
+      .map-frame iframe {
+        min-height: 340px;
+      }
+
+      .info-list li,
+      .business-list li {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .call-panel h3 {
+        font-size: 24px;
+      }
+
+      .call-number {
+        width: 100%;
+        min-height: 62px;
+        font-size: 22px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .footer-meta {
+        text-align: left;
+      }
+
+      .mobile-call-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: block;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        border-top: 1px solid rgba(255, 249, 240, 0.18);
+        background: rgba(31, 26, 23, 0.94);
+        backdrop-filter: blur(14px);
+      }
+
+      .mobile-call-bar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 58px;
+        border-radius: var(--radius);
+        color: var(--charcoal);
+        background: var(--gold);
+        font-size: 18px;
+        font-weight: 900;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
+      }
+    }
+
+    @media (max-width: 360px) {
+      .site-nav {
+        font-size: 11px;
+      }
+
+      .site-nav a {
+        padding: 7px 5px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .message-box,
+      .feature-card,
+      .product-card,
+      .step-card,
+      .info-card,
+      .hours-panel,
+      .call-panel,
+      .contact-lead,
+      .form-panel {
+        padding: 20px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-card {
+        min-height: 0;
+      }
+
+      .map-frame,
+      .map-frame iframe {
+        min-height: 340px;
+      }
+
+      .info-list li,
+      .business-list li {
+        grid-template-columns: 1fr;
+        gap: 2px;
+      }
+
+      .call-panel h3 {
+        font-size: 24px;
+      }
+
+      .call-number {
+        width: 100%;
+        min-height: 62px;
+        font-size: 22px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+
+      .footer-meta {
+        text-align: left;
+      }
+
+      .mobile-call-bar {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        display: block;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        border-top: 1px solid rgba(255, 249, 240, 0.18);
+        background: rgba(31, 26, 23, 0.94);
+        backdrop-filter: blur(14px);
+      }
+
+      .mobile-call-bar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 58px;
+        border-radius: var(--radius);
+        color: var(--charcoal);
+        background: var(--gold);
+        font-size: 18px;
+        font-weight: 900;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.24);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="肉の田中屋 トップへ">
+        <span class="brand-mark" aria-hidden="true">肉</span>
+        <span class="brand-name">
+          <strong>肉の田中屋</strong>
+          <small>安曇野市穂高の精肉店</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="サイト内ナビゲーション">
+        <a href="#commitment">こだわり</a>
+        <a href="#products">商品</a>
+        <a href="#flow">ご注文の流れ</a>
+        <a href="#access">アクセス</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+      <a class="header-call" href="tel:0263822149">0263-82-2149</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">信州・安曇野市穂高</p>
+          <h1 id="hero-title"><span>一枚ずつ、手で切る。</span><span>安曇野・穂高の肉屋。</span></h1>
+          <p class="hero-lead">信州名物の馬さしと、りんごで育った信州牛。ご予約でいちばん美味しい状態をお渡しします。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="tel:0263822149">📞 電話で予約する</a>
+            <a class="button button-secondary" href="#products">商品を見る</a>
+          </div>
+          <div class="rating-strip" aria-label="Google評価">
+            <span>Google評価 ★4.5</span>
+            <span>口コミ 40件</span>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="店舗概要">
+          <ul class="quick-info">
+            <li>
+              <span class="icon" aria-hidden="true">🕙</span>
+              <span><strong>営業時間</strong>10:00〜18:00</span>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">📞</span>
+              <span><strong>電話予約</strong><a href="tel:0263822149">0263-82-2149</a></span>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">🅿️</span>
+              <span><strong>駐車場</strong>3台（店舗前2台・南側砂利駐車場1台）</span>
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">💴</span>
+              <span><strong>お支払い</strong>現金・PayPay（クレジットカード不可）</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="commitment" aria-labelledby="commitment-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">肉へのこだわり</span>
+          <h2 id="commitment-title">ご注文に合わせて、いちばん美味しい状態へ。</h2>
+          <p>肉の田中屋は、安曇野市穂高で馬さし・馬肉・信州牛・焼肉用のお肉などを扱う精肉店です。</p>
+        </div>
+
+        <div class="commitment-layout">
+          <div class="message-box">
+            <p>焼肉、バーベキュー用、すき焼き・しゃぶしゃぶ用のお肉は、事前予約を基本にしています。</p>
+            <p>受取日に合わせて一枚ずつ丁寧に処理する「手切り真心カット」で、食べる場面や量に合わせた状態でお渡しします。</p>
+            <p>売り切れや入荷状況によって内容が変わるため、ご注文時に品目・量・受取日時を電話またはFAXでご相談ください。</p>
+            <p>大切な食事や贈答に使うお肉ほど、早めの予約がおすすめです。</p>
+            <p class="confirm-line">【要確認：創業年・沿革】</p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">🔪</span>
+              <h3>手切り真心カット</h3>
+              <p>ご注文を受けてから、一枚ずつ丁寧に処理。肉の厚みや用途に合わせて整えます。</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">🐎</span>
+              <h3>信州名物の馬さし</h3>
+              <p>馬さし・馬肉・馬生もつを取り扱っています。<span class="confirm">【要確認：産地・仕入れ元の表現】</span></p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon" aria-hidden="true">🍎</span>
+              <h3>りんごで育った信州牛</h3>
+              <p>信州牛を用途に合わせてご相談いただけます。<span class="confirm">【要確認：等級表記（A5等）を載せてよいか】</span></p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" aria-labelledby="products-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">商品紹介</span>
+          <h2 id="products-title">馬さしからBBQ、ご贈答まで。</h2>
+          <p>用途と人数に合わせて、お電話で内容をご確認ください。価格はデモ段階では掲載していません。</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">🐎</span>
+            <h3>馬さし・馬肉・馬生もつ</h3>
+            <p>信州名物として親しまれる馬肉商品。部位や在庫は入荷状況により変わります。</p>
+            <span class="confirm">【要確認：価格・内容量】</span>
+          </article>
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">🥫</span>
+            <h3>馬肉加工食品</h3>
+            <p>馬肉を使った加工食品。ご家庭用にも手土産にも相談しやすい商品です。</p>
+            <span class="confirm">【要確認：価格・内容量】</span>
+          </article>
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">🍎</span>
+            <h3>信州牛</h3>
+            <p>りんごで育った信州牛。焼肉、すき焼き、しゃぶしゃぶなど用途に合わせてご相談ください。</p>
+            <span class="confirm">【要確認：価格・内容量】</span>
+          </article>
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">🔥</span>
+            <h3>焼肉用味付肉</h3>
+            <p>牛ハラミ、牛生タン、牛カルビなど。BBQや家族の集まりに向いた人気商品です。</p>
+            <span class="confirm">【要確認：価格・内容量】</span>
+          </article>
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">🥩</span>
+            <h3>牛ホルモン・牛ミノ</h3>
+            <p>牛生ホルモンや牛ミノなど、焼肉や鍋で楽しめる商品を取り扱っています。</p>
+            <span class="confirm">【要確認：価格・内容量】</span>
+          </article>
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">🐷</span>
+            <h3>豚ロース</h3>
+            <p>焼肉、塩焼き、日常の食卓にも使いやすい豚ロースを用途に合わせてご相談いただけます。</p>
+            <span class="confirm">【要確認：価格・内容量】</span>
+          </article>
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">🍲</span>
+            <h3>すき焼き・しゃぶしゃぶ用</h3>
+            <p>受取日に合わせた手切りで、鍋用のお肉をきれいに盛り付けてご用意します。</p>
+            <span class="confirm">【要確認：価格・内容量】</span>
+          </article>
+          <article class="product-card">
+            <span class="product-icon" aria-hidden="true">🎁</span>
+            <h3>ご贈答用詰め合わせ</h3>
+            <p>季節の贈り物やご挨拶に。内容や数量は事前にご相談ください。</p>
+            <span class="confirm">【要確認：価格・内容量】</span>
+          </article>
+        </div>
+
+        <p class="note">季節や入荷状況により内容が変わります。お電話でご確認ください。</p>
+      </div>
+    </section>
+
+    <section id="flow" aria-labelledby="flow-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">ご注文の流れ</span>
+          <h2 id="flow-title">電話またはFAXで、受取日時まで予約。</h2>
+          <p>事前予約制だからこそ、受取日に合わせた手切りでお渡しできます。</p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="step-card">
+            <span class="step-icon" aria-hidden="true">📞</span>
+            <h3>電話またはFAXで予約</h3>
+            <p>品目、量、受取日時をお伝えください。電話は <a href="tel:0263822149">0263-82-2149</a> です。</p>
+          </article>
+          <article class="step-card">
+            <span class="step-icon" aria-hidden="true">🔪</span>
+            <h3>受取日に合わせて手切り</h3>
+            <p>焼肉、BBQ、すき焼き、しゃぶしゃぶなど、用途に合わせて丁寧にカットします。</p>
+          </article>
+          <article class="step-card">
+            <span class="step-icon" aria-hidden="true">🛍</span>
+            <h3>店頭で受取・お支払い</h3>
+            <p>お支払いは現金・PayPayに対応。クレジットカードはご利用いただけません。</p>
+          </article>
+        </div>
+
+        <ul class="attention-list">
+          <li><span aria-hidden="true">※</span><span>夏季（5〜10月）は、商品の安全と美味しさのため保冷バッグ持参がおすすめです。</span></li>
+          <li><span aria-hidden="true">※</span><span>繁忙期は電話に出られない場合があり、折り返しになることがあります。</span></li>
+        </ul>
+
+        <div class="faq">
+          <h3>よくある質問</h3>
+          <div class="faq-list">
+            <details>
+              <summary>当日購入は可能ですか？</summary>
+              <p><span class="confirm">【要確認：当日購入の可否】</span> 事前予約制の商品が多いため、お急ぎの場合もまずはお電話でご確認ください。</p>
+            </details>
+            <details>
+              <summary>クレジットカードは使えますか？</summary>
+              <p>クレジットカードは利用不可です。お支払いは現金・PayPayに対応しています。</p>
+            </details>
+            <details>
+              <summary>贈答用の発送は可能ですか？</summary>
+              <p><span class="confirm">【要確認：発送可否・地域・送料】</span> ご贈答用詰め合わせは内容と数量をお電話でご相談ください。</p>
+            </details>
+            <details>
+              <summary>駐車場はありますか？</summary>
+              <p>駐車場は3台分です。店舗前2台、南側砂利駐車場1台をご利用ください。</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="access" aria-labelledby="access-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">アクセス</span>
+          <h2 id="access-title">穂高駅周辺から立ち寄りやすい、町の精肉店。</h2>
+          <p>お受け取りの際は、店舗前と南側砂利駐車場をご利用ください。</p>
+        </div>
+
+        <div class="access-layout">
+          <div class="map-frame" aria-label="肉の田中屋のGoogleマップ">
+            <iframe
+              title="肉の田中屋の地図"
+              src="https://maps.google.com/maps?q=%E9%95%B7%E9%87%8E%E7%9C%8C%E5%AE%89%E6%9B%87%E9%87%8E%E5%B8%82%E7%A9%82%E9%AB%982629-6&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="info-stack">
+            <article class="info-card">
+              <h3>店舗情報</h3>
+              <ul class="info-list">
+                <li><span>店名</span><span>肉の田中屋（有限会社田中屋商店）</span></li>
+                <li><span>所在地</span><span>〒399-8303 長野県安曇野市穂高2629-6</span></li>
+                <li><span>電話</span><span><a href="tel:0263822149">0263-82-2149</a></span></li>
+                <li><span>FAX</span><span>0263-82-0349</span></li>
+              </ul>
+            </article>
+            <article class="info-card">
+              <h3>駐車場</h3>
+              <p>3台分あります。店舗前2台、南側砂利駐車場1台をご利用ください。</p>
+            </article>
+            <a class="button button-dark" href="https://www.google.com/maps/place/?q=place_id:ChIJe5y5g8ltHWAR3JAl59msn4s" target="_blank" rel="noopener">地図アプリで開く</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hours" id="hours" aria-labelledby="hours-title">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">営業時間・電話</span>
+          <h2 id="hours-title">ご予約は、営業時間内のお電話が確実です。</h2>
+          <p>大型連休、BBQシーズン、土日祝日は早めのご予約がおすすめです。</p>
+        </div>
+
+        <div class="hours-layout">
+          <div class="hours-panel">
+            <ul class="business-list">
+              <li><span>営業時間</span><span>10:00〜18:00</span></li>
+              <li><span>定休日</span><span>毎週水曜日（臨時休業あり） <span class="confirm">【要確認：木曜の扱い】</span></span></li>
+              <li><span>支払い</span><span>現金・PayPay（クレジットカード不可）</span></li>
+              <li><span>注文方法</span><span>事前予約制（電話またはFAX）</span></li>
+            </ul>
+          </div>
+          <div class="call-panel">
+            <h3>電話で予約する</h3>
+            <p>品目、量、受取日時をお伝えください。馬さし・焼肉用・ご贈答用など、入荷状況もあわせて確認できます。</p>
+            <a class="call-number" href="tel:0263822149">📞 0263-82-2149</a>
+            <div class="fax-line">FAX 0263-82-0349</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-lead">
+            <span class="section-label">お問い合わせ</span>
+            <h2 id="contact-title">お急ぎのご注文はお電話が確実です。</h2>
+            <p>当日の在庫、受取時間、贈答用の相談など、急ぎの内容はお電話でご確認ください。</p>
+            <a class="button button-primary" href="tel:0263822149">📞 電話で予約する</a>
+          </div>
+
+          <form class="form-panel" action="" method="post">
+            <div class="form-grid">
+              <label>
+                名前
+                <input type="text" name="name" autocomplete="name" placeholder="例：山田 太郎">
+              </label>
+              <label>
+                電話番号
+                <input type="tel" name="phone" autocomplete="tel" placeholder="例：090-0000-0000">
+              </label>
+              <label>
+                お問い合わせ内容
+                <textarea name="message" placeholder="ご希望の商品、量、受取日時など"></textarea>
+              </label>
+            </div>
+            <div class="form-actions">
+              <button class="button button-dark" type="button">送信する</button>
+              <p class="demo-note">デモサイトのため、フォーム送信は未接続です。</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">肉の田中屋</div>
+        <p>有限会社田中屋商店</p>
+        <p>〒399-8303 長野県安曇野市穂高2629-6</p>
+        <p>TEL <a href="tel:0263822149">0263-82-2149</a> / FAX 0263-82-0349</p>
+      </div>
+      <div class="footer-meta">
+        <p>デモサイト（制作：平林哲大）</p>
+        <p>&copy; <span id="year">2026</span> 肉の田中屋.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-call-bar" aria-label="電話予約">
+    <a href="tel:0263822149">📞 電話で予約する</a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.querySelectorAll(".faq-list details").forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (!item.open) return;
+        document.querySelectorAll(".faq-list details").forEach((other) => {
+          if (other !== item) other.open = false;
+        });
+      });
+    });
+  </script>
+</body>
+</html>
