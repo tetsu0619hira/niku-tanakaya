@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="robots" content="noindex">
   <meta name="description" content="長野県安曇野市穂高の精肉店、肉の田中屋のリニューアル提案用デモサイト。馬さし、馬肉、信州牛、焼肉用味付肉、ご贈答用詰め合わせなどを事前予約で承ります。">
   <title>肉の田中屋｜安曇野市穂高の馬さし・信州牛・焼肉用精肉店</title>
@@ -1045,7 +1045,7 @@
 
     @media (max-width: 640px) {
       body {
-        padding-bottom: 92px;
+        padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
       }
 
       section {
@@ -1199,7 +1199,7 @@
         bottom: 0;
         z-index: 100;
         display: block;
-        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        padding: 12px 14px calc(14px + env(safe-area-inset-bottom, 0px));
         border-top: 1px solid rgba(255, 249, 240, 0.18);
         background: rgba(31, 26, 23, 0.94);
         backdrop-filter: blur(14px);
@@ -1290,7 +1290,7 @@
         bottom: 0;
         z-index: 100;
         display: block;
-        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        padding: 12px 14px calc(14px + env(safe-area-inset-bottom, 0px));
         border-top: 1px solid rgba(255, 249, 240, 0.18);
         background: rgba(31, 26, 23, 0.94);
         backdrop-filter: blur(14px);
